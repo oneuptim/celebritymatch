@@ -3,17 +3,31 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Compare Celeb</title>
+    <title>Celebrity Match | Compare Personality Traits</title>
     <link rel="stylesheet" href="{% static 'celebmatch/css/styles.css' %}">
+    <script src="https://use.typekit.net/iii7xtz.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
     <div id="wrapper">
-      <form class="" action="/process" method="post">
-        {% csrf_token %}
-        <input type="text" name="user" value="" placeholder="Enter user handle e.g. @BrandWithTim">
-        <input type="text" name="celeb" value="" placeholder="Enter celebrity's handle e.g. @Oprah">
-        <input type="submit" name="" value="Compare!">
-      </form>
+      <div class="logo">
+         Celebrity Match!
+      </div>
+      <div class="left-col">
+        <p>Have you ever wondered which famous person you have the most in common with?</p>
+        <p>
+          Well, if you know their twitter handle, you have the power to find out what personality traits they posses and how close they match to your own (or someone else's)
+        </p>
+        <p>I hope your journey of self-discovery is fun!</p>
+      </div>
+      <div class="right-col">
+        <form class="" action="/process" method="post">
+          {% csrf_token %}
+          <input type="text" name="user" value="" placeholder="Enter user handle e.g. @BrandWithTim">
+          <input type="text" name="celeb" value="" placeholder="Enter celebrity's handle e.g. @Oprah">
+          <input type="submit" name="" value="Compare!">
+        </form>
+      </div>
     </div>
   </body>
 </html>
